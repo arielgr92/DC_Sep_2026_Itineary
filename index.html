@@ -3,7 +3,7 @@
 <head>
 <meta charset="UTF-8">
 <meta name="viewport" content="width=device-width, initial-scale=1.0, maximum-scale=1.0">
-<title>La Gran Ruta de Comida en DC 🍒</title>
+<title>Explorando la Capital</title>
 <link rel="preconnect" href="https://fonts.googleapis.com">
 <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
 <link href="https://fonts.googleapis.com/css2?family=Baloo+2:wght@500;700;800&family=Nunito:wght@500;700;800&display=swap" rel="stylesheet">
@@ -29,10 +29,12 @@
   *{box-sizing:border-box;}
   html,body{margin:0;padding:0;}
   body{
-    background:
-      radial-gradient(circle at 15% 5%, #FCE7ED 0%, transparent 45%),
-      radial-gradient(circle at 90% 0%, #FDF0DA 0%, transparent 40%),
-      var(--cream);
+    background-color:var(--cream);
+    background-image:
+      linear-gradient(rgba(251,245,236,.88), rgba(251,245,236,.88)),
+      url('assets/dc-icon-pattern.png');
+    background-size:auto, 768px auto;
+    background-attachment:fixed;
     font-family:'Nunito', sans-serif;
     color:var(--ink);
     padding:22px 14px 60px;
@@ -44,16 +46,22 @@
   /* ---------- HERO ---------- */
   .hero{
     position:relative;
-    background:var(--navy);
+    background:var(--navy) url('assets/dc-header.png') center/cover no-repeat;
     border:2px solid var(--navy-dark);
     border-radius:26px;
-    padding:26px 20px 22px;
+    min-height:250px;
+    padding:34px 20px 28px;
     box-shadow: 0 6px 0 var(--navy-dark), 0 10px 16px rgba(58,78,99,0.18);
     overflow:hidden;
     text-align:center;
     margin-bottom:22px;
   }
-  .hero .blossoms{position:absolute; inset:0; opacity:.8; pointer-events:none;}
+  .hero::before{
+    content:'';
+    position:absolute;
+    inset:0;
+    background:linear-gradient(90deg, rgba(35,50,66,.82), rgba(58,78,99,.52), rgba(35,50,66,.72));
+  }
   .hero-content{position:relative; z-index:2;}
   .eyebrow{
     display:inline-block;
@@ -224,53 +232,16 @@
     border-radius:8px;
   }
 
-  /* ---------- FOOTER ---------- */
-  .footer{
-    text-align:center;
-    margin-top:8px;
-    padding:18px;
-  }
-  .footer-card{
-    display:inline-block;
-    background:var(--cherry);
-    border:2px solid var(--cherry-dark);
-    border-radius:20px;
-    padding:14px 22px;
-    box-shadow:0 5px 0 var(--cherry-dark);
-    transform:rotate(-1deg);
-  }
-  .footer-card p{
-    margin:0;
-    font-family:'Baloo 2', sans-serif;
-    font-weight:700;
-    color:#fff;
-    font-size:15px;
-  }
-  .footer small{
-    display:block;
-    margin-top:10px;
-    color:#b18a95;
-    font-weight:700;
-    font-size:12px;
-  }
 </style>
 </head>
 <body>
 <div class="wrap">
 
   <div class="hero">
-    <svg class="blossoms" viewBox="0 0 400 140" preserveAspectRatio="none">
-      <circle cx="30" cy="20" r="10" fill="#FCE0E7" opacity="0.7"/>
-      <circle cx="370" cy="30" r="14" fill="#FCE0E7" opacity="0.6"/>
-      <circle cx="60" cy="120" r="8" fill="#F5DDA9" opacity="0.5"/>
-      <circle cx="340" cy="115" r="10" fill="#FCE0E7" opacity="0.6"/>
-      <path d="M170 130 L180 60 L190 130 Z" fill="#5c7188" opacity="0.4"/>
-      <path d="M160 65 L200 65 L180 40 Z" fill="#5c7188" opacity="0.4"/>
-    </svg>
     <div class="hero-content">
       <span class="eyebrow">Guía de Campo DC</span>
-      <h1>La Gran Ruta<br>de Comida en DC</h1>
-      <p>Una misión de una semana para alimentar a dos estómagos muy decididos</p>
+      <h1>Explorando la Capital</h1>
+      <p>Washington DC - Arlington VA</p>
       <div class="hero-emoji-row">🍒🏛️🍜🌸</div>
     </div>
   </div>
@@ -280,18 +251,18 @@
     <div class="day-header" style="background:#FCEDF1;">
       <div class="day-badge">SÁB</div>
       <div>
-        <div class="day-title">¡Aterrizaron!</div>
-        <div class="day-sub">Día 1 · llegada + The Wharf</div>
+        <div class="day-title">¡Llegaron en tren!</div>
+        <div class="day-sub">Día 1 · Nueva York → Washington DC + The Wharf</div>
       </div>
-      <div class="day-icon">🛬</div>
+      <div class="day-icon">🚆</div>
     </div>
     <div class="day-body">
       <div class="stop transit">
-        <div class="stop-emoji">✈️</div>
+        <div class="stop-emoji">🚆</div>
         <div class="stop-text">
           <span class="meal-tag tag-transit">Llegada</span>
-          <div class="stop-name">Aeropuerto IAD · 5:00 PM</div>
-          <div class="stop-caption">Directo a bajar la maleta y agarrar hambre</div>
+          <div class="stop-name">Union Station · 5:00 PM</div>
+          <div class="stop-caption">Llegada en tren desde Nueva York</div>
         </div>
       </div>
       <div class="stop filled">
@@ -483,13 +454,6 @@
         </div>
       </div>
     </div>
-  </div>
-
-  <div class="footer">
-    <div class="footer-card">
-      <p>🍒 6 días · 3 comidas misteriosas por resolver 🍒</p>
-    </div>
-    <small>Manda más lugares y este mapa se pone aún más hambriento</small>
   </div>
 
 </div>
