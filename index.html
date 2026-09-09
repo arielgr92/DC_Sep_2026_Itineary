@@ -89,73 +89,6 @@
     letter-spacing:8px;
   }
 
-  /* ---------- TICKET (tour confirmation) ---------- */
-  .ticket{
-    position:relative;
-    background:var(--panel);
-    border:2px solid var(--line);
-    border-radius:20px;
-    padding:16px 18px;
-    margin-bottom:22px;
-    box-shadow:0 5px 0 var(--line), 0 8px 14px rgba(58,78,99,0.10);
-    transform:rotate(-0.5deg);
-  }
-  .ticket-header{
-    display:flex;
-    align-items:center;
-    gap:10px;
-    margin-bottom:10px;
-  }
-  .ticket-emoji{
-    font-size:24px;
-    width:36px;
-    height:36px;
-    display:flex;
-    align-items:center;
-    justify-content:center;
-    background:var(--sky);
-    border:2px solid var(--sky-dark);
-    border-radius:50%;
-  }
-  .ticket-title{
-    font-family:'Baloo 2', sans-serif;
-    font-weight:700;
-    font-size:16.5px;
-    color:var(--navy-dark);
-  }
-  .ticket-sub{
-    font-size:12px;
-    font-weight:700;
-    color:#9299a6;
-  }
-  .ticket-grid{
-    display:grid;
-    grid-template-columns:1fr 1fr;
-    gap:8px 14px;
-    margin-top:6px;
-  }
-  .ticket-field{
-    background:var(--cream);
-    border:1.5px solid var(--line-soft);
-    border-radius:12px;
-    padding:8px 10px;
-  }
-  .ticket-field.full{grid-column:1 / -1;}
-  .ticket-label{
-    font-size:10.5px;
-    font-weight:700;
-    color:#9299a6;
-    text-transform:uppercase;
-    letter-spacing:.3px;
-    margin-bottom:2px;
-  }
-  .ticket-value{
-    font-family:'Baloo 2', sans-serif;
-    font-weight:700;
-    font-size:14px;
-    color:var(--ink);
-  }
-
   /* ---------- DAY CARD ---------- */
   .day{
     position:relative;
@@ -342,35 +275,6 @@
     </div>
   </div>
 
-  <!-- TOUR CONFIRMATION -->
-  <div class="ticket">
-    <div class="ticket-header">
-      <div class="ticket-emoji">🎫</div>
-      <div>
-        <div class="ticket-title">Reservación de Tour Confirmada</div>
-        <div class="ticket-sub">Cae el martes — ver Día 4 abajo</div>
-      </div>
-    </div>
-    <div class="ticket-grid">
-      <div class="ticket-field full">
-        <div class="ticket-label">N.º de Confirmación</div>
-        <div class="ticket-value">202609071505124</div>
-      </div>
-      <div class="ticket-field">
-        <div class="ticket-label">Cupos</div>
-        <div class="ticket-value">2 personas</div>
-      </div>
-      <div class="ticket-field">
-        <div class="ticket-label">Fecha del Tour</div>
-        <div class="ticket-value">15 sep 2026</div>
-      </div>
-      <div class="ticket-field full">
-        <div class="ticket-label">Hora (Hora Local DC)</div>
-        <div class="ticket-value">2:00 PM</div>
-      </div>
-    </div>
-  </div>
-
   <!-- SÁBADO -->
   <div class="day">
     <div class="day-header" style="background:#FCEDF1;">
@@ -406,7 +310,7 @@
     <div class="day-header" style="background:#FDF3E1;">
       <div class="day-badge">DOM</div>
       <div>
-        <div class="day-title">Reservación Confirmada</div>
+        <div class="day-title">Brunch, museo y cena</div>
         <div class="day-sub">Día 2 · casa → Succotash PRIME</div>
       </div>
       <div class="day-icon">📖</div>
@@ -433,8 +337,7 @@
         <div class="stop-text">
           <span class="meal-tag tag-dinner">Cena</span>
           <div class="stop-name">Succotash PRIME — Downtown DC</div>
-          <div class="stop-caption">Mesa para 2 · domingo 13 de sep 2026 · 6:30 PM</div>
-          <div class="stop-detail">✔ Reservación confirmada vía OpenTable</div>
+          <div class="stop-caption">Domingo 13 de sep 2026 · 6:30 PM</div>
         </div>
       </div>
     </div>
@@ -510,8 +413,7 @@
         <div class="stop-emoji">🎫</div>
         <div class="stop-text">
           <span class="meal-tag tag-transit">Tour</span>
-          <div class="stop-name">Tour confirmado · 2:00 PM</div>
-          <div class="stop-caption">2 personas · confirmación 202609071505124</div>
+          <div class="stop-name">Tour · 2:00 PM</div>
         </div>
       </div>
       <div class="stop filled">
